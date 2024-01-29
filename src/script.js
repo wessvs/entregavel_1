@@ -4,6 +4,41 @@
 //ESCREVA SEU CÓDIGO AQUI!!
 
 
+function Calculadora(n1, n2, op) {
+  let resultado
+
+  n1 = Number(n1)
+  n2 = Number(n2)
+
+  if(op == "+")
+  {
+    resultado = n1 + n2;
+  } else if(op == "-")
+  {
+    resultado = n1 - n2;
+  } else if(op == "*") 
+  {
+    resultado = n1 * n2
+  } else if(op == "/")
+  {
+    resultado = n1/n2
+  } else{
+    let total = n1
+    for(let i=1; i<=n2;i++) {
+      total *= n1
+    }
+    resultado = total
+  }
+
+  if (resultado === undefined || resultado > 1000000){
+    return "ERRO"
+  } else {
+    return resultado
+  }
+}
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
